@@ -1,0 +1,56 @@
+﻿@model BetService.Repository.Entity.Bets
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Bets</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EventId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EventId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlayerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlayerId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BetType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BetType)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,30 @@
+﻿@model IEnumerable<BetService.Repository.Entity.Players>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>TEMPO BET</h1>
+    <p class="lead"> BIG MATCH </p>
+    <div>
+        There are @Model.Count() players in the system...
+    </div>
+    <table style="width:100%;">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td> @item.Name </td>
+                <td> @item.Email </td>
+                <td> @item.Credit </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        }
+        </table>
+
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+

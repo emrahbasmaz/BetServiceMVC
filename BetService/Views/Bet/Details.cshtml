@@ -1,0 +1,58 @@
+﻿@model BetService.Repository.Entity.Bets
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Bets</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EventId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EventId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlayerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlayerId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BetType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BetType)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BetId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+
+@section footer{
+    <div>
+        This is a Customer Footer!!!!!!!!!!!!!!!!!!!!!!!!!!
+    </div>
+}
+
